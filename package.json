@@ -1,0 +1,8 @@
+{
+  "name": "tron-legacy-js",
+  "version": "1.0.0",
+  "description": "Tron Legacy: En busca de una nueva realidad. Juego 3D en JavaScript (WebGL propio), sin dependencias.",
+  "private": true,
+  "scripts": { "start": "node servidor.js", "test": "node --test tests/core.test.js" },
+  "license": "UNLICENSED"
+}

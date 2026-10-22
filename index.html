@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tron Legacy · En busca de una nueva realidad</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+
+<div id="hud" class="hidden">
+  <div id="hudTL">
+    <div id="sectorName"></div>
+    <div id="threat"><span class="lbl"><span id="threatIcon" aria-hidden="true">⚠</span> Amenaza</span><div class="bar"><i id="threatFill"></i></div><b id="threatNum">0</b></div>
+    <div id="status"></div>
+  </div>
+  <div id="objective">
+    <svg id="objArrow" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L35 35 L20 27 L5 35 Z"/></svg>
+    <div><div id="objText"></div><div id="objDist"></div></div>
+  </div>
+  <div id="hint"></div>
+  <div id="labels"></div>
+  <div id="prompt" class="hidden"><span class="key">E</span><span id="promptText"></span><div id="holdBar"><i></i></div></div>
+  <div id="toasts"></div>
+  <div id="lockHint" class="hidden"></div>
+  <div id="fps" class="hidden"></div>
+</div>
+
+<div id="tools">
+  <button id="btnHelp" class="tbtn" type="button" title="Ayuda y controles (H)" aria-label="Ayuda y controles"><span class="q">?</span><kbd>H</kbd></button>
+  <button id="btnSound" class="tbtn" type="button" title="Sonido (M para silenciar)" aria-label="Control de sonido" aria-pressed="false">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/><path class="w" d="M15 8.5a5 5 0 010 7M17.5 6a8.5 8.5 0 010 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><path class="x" d="M16 9l6 6M22 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><kbd>M</kbd></button>
+  <div id="soundPop" class="hidden">
+    <label>Música <input type="range" id="slMusic" min="0" max="1" step="0.05"></label>
+    <label>Efectos <input type="range" id="slSfx" min="0" max="1" step="0.05"></label>
+    <label>Voces <input type="range" id="slVoice" min="0" max="1" step="0.05"></label>
+    <div id="voiceNote" class="small"></div>
+    <button id="btnMute" class="btn" type="button">Silenciar todo (M)</button>
+  </div>
+</div>
+
+<div id="dialog" class="hidden">
+  <div id="dlgSpeaker"></div>
+  <div id="dlgText"></div>
+  <div id="dlgOptions"></div>
+  <div id="dlgNext">Espacio ▸</div>
+</div>
+
+<div id="screen" class="hidden"></div>
+<div id="fade"></div>
+<div id="errorBox" class="hidden"></div>
+
+<script src="data/config.js"></script>
+<script src="data/texts.es.js"></script>
+<script src="src/core/sha256.js"></script>
+<script src="src/core/chain.js"></script>
+<script src="src/core/trust.js"></script>
+<script src="src/core/threat.js"></script>
+<script src="src/core/geom.js"></script>
+<script src="src/core/dialogue.js"></script>
+<script src="src/core/decisions.js"></script>
+<script src="src/core/state.js"></script>
+<script src="data/dialogs/s1.js"></script>
+<script src="data/dialogs/s2.js"></script>
+<script src="data/dialogs/s3.js"></script>
+<script src="src/engine/math.js"></script>
+<script src="src/engine/batch.js"></script>
+<script src="src/engine/renderer.js"></script>
+<script src="src/entities/rig.js"></script>
+<script src="src/entities/player.js"></script>
+<script src="src/entities/npc.js"></script>
+<script src="src/entities/sentinel.js"></script>
+<script src="src/entities/particles.js"></script>
+<script src="src/world/level.js"></script>
+<script src="src/world/sector1.js"></script>
+<script src="src/world/sector2.js"></script>
+<script src="src/world/sector3.js"></script>
+<script src="src/input.js"></script>
+<script src="src/telemetry.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/voice.js"></script>
+<script src="src/ui/ui.js"></script>
+<script src="src/game.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
